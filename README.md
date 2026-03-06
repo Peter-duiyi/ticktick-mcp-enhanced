@@ -1,5 +1,3 @@
-[English](README_en.md)
-
 <p align="center">
   <img src="logo.png" width="128" alt="TickTick MCP Logo">
 </p>
