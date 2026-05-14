@@ -16,7 +16,11 @@ def format_task(task: Dict, show_local_time: bool = True) -> str:
     
     # Add project ID
     formatted += f"Project ID: {task.get('projectId', 'None')}\n"
-    
+
+    # Add parent task ID if this task is a subtask (only present when parentId set)
+    if task.get('parentId'):
+        formatted += f"Parent ID: {task.get('parentId')}\n"
+
     # Add dates with timezone conversion
     if task.get('startDate'):
         if show_local_time:
